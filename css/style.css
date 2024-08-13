@@ -4,7 +4,6 @@
     box-sizing: border-box;
     border: none;
     outline: none;
-    font-weight: 100;
     font-family: sans-serif;
     list-style: none;
 }
@@ -17,7 +16,7 @@ body {
     font-size: 1.6rem;
     background-color: #f5f5f5;
     overflow-x: hidden;
-    color: #444;
+    color: #343434;
     padding-bottom: 4rem;
 }
 
@@ -31,20 +30,6 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: .4rem 1.2rem;
-}
-
-h1 {
-    margin-top: 3.6rem;
-}
-
-.main p {
-    margin-block: 1rem;
-    line-height: 2.4rem;
-    color: #555;
-}
-
-.subtitle {
-    margin-top: 2rem;
 }
 
 /* Header */
@@ -70,15 +55,31 @@ header a.logo {
     font-size: 2.4rem;
 }
 
+/* Main */
+
+.main h1 {
+    margin-top: 3.6rem;
+    margin-bottom: 1.8rem;
+}
+
+.main p {
+    /* margin-top: 1rem; */
+    line-height: 2.4rem;
+}
+
+.main .subtitle {
+    margin-top: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
 /* Place */
 
 .game {
     display: flex;
     gap: .4rem;
-    margin-top: 1rem;
-    padding: .8rem .4rem;
+    /* padding: .8rem .4rem; */
     overflow-x: scroll;
-    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: x mandatory;
 }
 
 .game .place {
@@ -86,14 +87,14 @@ header a.logo {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border: 1px solid #ececec;
+    border: 1px solid #ccc;
     padding: 1.2rem .8rem;
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
 }
 
 .place h3 {
     font-weight: bold;
-    margin-bottom: .8rem;
+    /* margin-bottom: .8rem; */
     font-size: 1.6rem;
 }
 
@@ -136,35 +137,31 @@ header a.logo {
 }
 
 .place.blue {
-    background-color: hsl(230, 90%, 90%);
+    background-color: hsl(230, 90%, 80%);
 }
 
 .place.red {
-    background-color: hsl(360, 90%, 80%);
+    background-color: hsl(360, 90%, 75%);
 }
 
 .place.orange {
-    background-color: hsl(39, 100%, 80%);
+    background-color: hsl(39, 100%, 75%);
 }
 
 .place.gray {
     background-color: hsl(0, 0%, 80%);
 }
 
-/* .content {
-    margin-top: 2rem;
-} */
 
 ul.phrasesList {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     border-radius: .4rem;
     background-color: #fff;
     padding: .8rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
     gap: .4rem;
-    font-weight: bold;
-    color: #555;
+    font-weight: 500;
     max-height: 36rem;
     overflow-y: scroll;
 }
@@ -172,7 +169,7 @@ ul.phrasesList {
 ul.phrasesList li {
     padding: .8rem 8rem .8rem .8rem;
     border-radius: .4rem;
-    border: 1px solid #dcdcdc;
+    border: 1px solid #ccc;
     display: inline-block;
     position: relative;
     font-size: 1.4rem;
@@ -212,7 +209,7 @@ ul.phrasesList li.false::before {
     }
 }
 
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 414px) {
     html {
         font-size: 50%;
     }
