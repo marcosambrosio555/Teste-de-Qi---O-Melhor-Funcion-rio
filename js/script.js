@@ -452,6 +452,8 @@ function checkAll(category) {
         validate(filteredLogics, category)
     }
 
+    checkForWin()
+
 }
 
 checkAll(null, null)
@@ -565,4 +567,30 @@ function update(item) {
         }
     }
 
+}
+
+function checkForWin() {
+    const any = anyPlaces.every(item => {
+        return item.checked
+    })
+    const aside = asidePlaces.every(item => {
+        return item.checked
+    })
+    const place = placesPhrases.every(item => {
+        return item.checked
+    })
+    const win = any && aside && place
+    let placeNull = true
+
+    for (let place in data) {
+        for (let prop in data[place]) {
+            if (data[place][prop] === null) {
+                placeNull = false
+            }
+        }
+    }
+
+    if (win && placeNull) {
+        alert("Você venceu")
+    }
 }

@@ -35,7 +35,7 @@ body {
 /* Header */
 
 header.header {
-    background-color: #343434;
+    background-color: #121216;
     padding: 1rem .4rem;
 }
 
@@ -194,7 +194,6 @@ ul.phrasesList li.true::before {
     content: "O";
     background-color: hsl(120, 100%, 90%);
     color: #008000;
-
 }
 
 ul.phrasesList li.false::before {
@@ -223,9 +222,7 @@ ul.phrasesList li.false::before {
     }
 
     ul.phrasesList li::before {
-        line-height: 2.8rem;
-        height: 2.4rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
 }
